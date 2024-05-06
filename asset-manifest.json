@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/civitai-images/static/css/main.59209219.css",
+    "main.js": "/civitai-images/static/js/main.15a5a449.js",
+    "static/js/453.a4ebaee0.chunk.js": "/civitai-images/static/js/453.a4ebaee0.chunk.js",
+    "index.html": "/civitai-images/index.html",
+    "main.59209219.css.map": "/civitai-images/static/css/main.59209219.css.map",
+    "main.15a5a449.js.map": "/civitai-images/static/js/main.15a5a449.js.map",
+    "453.a4ebaee0.chunk.js.map": "/civitai-images/static/js/453.a4ebaee0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59209219.css",
+    "static/js/main.15a5a449.js"
+  ]
+}
