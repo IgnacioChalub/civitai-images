@@ -1,4 +1,3 @@
-
 import './Main.css'
 import { useRef, useEffect, useCallback, useMemo } from 'react';
 import { useInfiniteQuery, useQueryClient } from 'react-query';
