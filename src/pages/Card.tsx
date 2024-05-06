@@ -43,7 +43,6 @@ const Card = ({ item, removeElement }: CardProps) => {
             <img
                 className="image"
                 src={item.url}
-                alt={"Image"}
                 onLoad={() => setImageLoaded(true)}
                 style={{ display: isImageLoaded ? 'block' : 'none' }}
             />
