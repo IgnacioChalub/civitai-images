@@ -12,7 +12,6 @@ const Main = () => {
     const queryClient = useQueryClient();
     const {
         data,
-        error,
         fetchNextPage,
         hasNextPage,
         isFetchingNextPage,
@@ -53,23 +52,24 @@ const Main = () => {
         return data?.pages.reduce((acc, page) => acc.concat(page.items), [] as CardItem[]) || [];
     }, [data]);
 
-    const observer = new IntersectionObserver(handleIntersection, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25,
-    });
-
     useEffect(() => {
-        if (sentinelRef.current) {
-            observer.observe(sentinelRef.current);
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.25,
+        });
+        const currentSentinel = sentinelRef.current;
+        if (currentSentinel) {
+            observer.observe(currentSentinel);
         }
-        
         return () => {
-            if (sentinelRef.current) {
-                observer.unobserve(sentinelRef.current);
+            if (currentSentinel) {
+                observer.unobserve(currentSentinel);
             }
+            observer.disconnect();
         };
-    }, [sentinelRef, handleIntersection]);
+    }, [handleIntersection, sentinelRef]);
+    
 
     if (status === 'loading') {
         return (
