@@ -1,0 +1,12 @@
+
+.masonry-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    background-color: rgb(41, 39, 39);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
